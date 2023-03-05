@@ -1,0 +1,14 @@
+{
+  "name": "baltyre/b2b-client",
+  "type": "package",
+  "require": {
+    "php": "^8.0",
+    "ext-json": "*",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Baltyre\\B2BClient\\": "src/"
+    }
+  }
+}

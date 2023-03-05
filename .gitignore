@@ -1,0 +1,6 @@
+.idea
+vendor
+temp
+log
+sessions
+composer.lock

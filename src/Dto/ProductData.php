@@ -10,6 +10,8 @@ class ProductData
 {
     public string $code;
     public string $name;
+    public string $cdb;
+    public ?string $plu = null;
     public ?string $ean = null;
     public ?string $manufacturer_code = null;
     public ?Manufacturer $manufacturer = null;
@@ -28,6 +30,8 @@ class ProductData
     public static function fromApi(stdClass $data): self
     {
         $dto = new self($data->code, $data->name);
+        $dto->cdb = $data->cdb;
+        $dto->plu = $data->plu ?? null;
         $dto->ean = $data->ean ?? null;
         $dto->manufacturer_code = $data->manufacturer_code ?? null;
         $dto->manufacturer = Manufacturer::fromApi($data->manufacturer);

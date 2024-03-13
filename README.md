@@ -50,7 +50,9 @@ This returns a `ProductCollection` that constains `ProductData` objects with nex
 ```php
 class ProductData
 {
-    public string $code;                        // product code
+    public string $code;                        // product code (PLU if present, otherwise CDB)
+    public string $cdb;                         // product CDB code
+    public ?string $plu;                        // product PLU code
     public string $name;                        // product name
     public ?string $ean;                        // EAN
     public ?string $manufacturer_code;          // code from manufacturer
@@ -124,7 +126,9 @@ This returns a `PriceListCollection` that constains `ProductPricing` objects wit
 ```php
 class ProductPricing
 {
-    public string $code;                        // product code
+    public string $code;                        // product code (PLU if present, otherwise CDB)
+    public string $cdb;                         // product CDB code
+    public ?string $plu;                        // product PLU code
     public ?PricePolicy $price;
 }
 
@@ -147,7 +151,9 @@ This returns a `StockCollection` that constains `ProductStocks` objects with nex
 ```php
 class ProductStocks
 {
-    public string $code;                        // product code
+    public string $code;                        // product code (PLU if present, otherwise CDB)
+    public string $cdb;                         // product CDB code
+    public ?string $plu;                        // product PLU code
     public ?ResourceCollection $stock;          // collection that containst `StockResource` objects
 }
 

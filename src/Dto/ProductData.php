@@ -21,6 +21,9 @@ class ProductData
     public ?ParameterCollection $parameters = null;
     public ?CategoryCollection $categories = null;
 
+    /** @var string[] */
+    public array $flags = [];
+
     private function __construct(string $code, string $name)
     {
         $this->code = $code;
@@ -40,6 +43,7 @@ class ProductData
         $dto->pattern = Pattern::fromApi($data->pattern);
         $dto->parameters = ParameterCollection::fromApi($data->parameters);
         $dto->categories = CategoryCollection::fromApi($data->categories);
+        $dto->flags = $data->flags ?? [];
         return $dto;
     }
 }

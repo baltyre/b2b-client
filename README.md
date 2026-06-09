@@ -62,6 +62,9 @@ class ProductData
     public ?CategoryCollection $categories;     // collection that containst `Category` objects
     public ?Volume $volume;
     public ?Weight $weight;
+
+    /** @var string[] */
+    public array $flags = [];                   // array of flags (e.g. dot, tip)
 }
 ```
 

@@ -58,8 +58,8 @@ class ProductData
     public ?string $manufacturer_code;          // code from manufacturer
     public ?Manufacturer $manufacturer; 
     public ?Pattern $pattern;
-    public ?ParameterCollection $parameters;    // collection that containst `Parameter` objects
-    public ?CategoryCollection $categories;     // collection that containst `Category` objects
+    public ?ParameterCollection $parameters;    // collection that contains `Parameter` objects
+    public ?CategoryCollection $categories;     // collection that contains `Category` objects
     public ?Volume $volume;
     public ?Weight $weight;
 
@@ -85,7 +85,7 @@ class Pattern
     public ?string $season;
     public ?string $purpose;
     public ?Picture $picture;
-    public ?PictureCollection $pictures;        // collection that containst `Picture` objects
+    public ?PictureCollection $pictures;        // collection that contains `Picture` objects
 }
 
 class Parameter
@@ -157,7 +157,7 @@ class ProductStocks
     public string $code;                        // product code (PLU if present, otherwise CDB)
     public string $cdb;                         // product CDB code
     public ?string $plu;                        // product PLU code
-    public ?ResourceCollection $stock;          // collection that containst `StockResource` objects
+    public ?ResourceCollection $stock;          // collection that contains `StockResource` objects
 }
 
 class StockResource
